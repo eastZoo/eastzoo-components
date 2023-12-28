@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -15,12 +11,18 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "outDir": "./dist",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    // 옵션은 출력을 내보내지 않는다는 설정
+    "noEmit": false,
+    // .d.ts 파일 생성 여부
+    "declaration": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  /**
+    tsc 명령어로 컴파일 할 파일이 어디에 위치하는지를 명시해주는 옵션입니다.
+      우리는 라이브러리를 개발할 위치를 src 폴더에서 lib 폴더를 생성해서 그 안에서 개발을 할 겁니다. 그래서 아래와 같이 작성을 합니다.
+    **/
+  "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts"]
 }
