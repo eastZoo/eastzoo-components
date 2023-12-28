@@ -18,11 +18,11 @@
     "noEmit": false,
     // .d.ts 파일 생성 여부
     "declaration": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
   /**
     tsc 명령어로 컴파일 할 파일이 어디에 위치하는지를 명시해주는 옵션입니다.
       우리는 라이브러리를 개발할 위치를 src 폴더에서 lib 폴더를 생성해서 그 안에서 개발을 할 겁니다. 그래서 아래와 같이 작성을 합니다.
     **/
-  "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts"]
+  "include": ["./src/components/**/*.tsx", "./src/components/**/*.ts"]
 }
