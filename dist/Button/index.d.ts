@@ -7,4 +7,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: any;
     background?: string;
 }
-export declare const Button: ({ type, color, label, onClick, background, children, }: ButtonProps) => import("react").JSX.Element;
+declare const Button: ({ type, color, label, onClick, background, children, }: ButtonProps) => import("react").JSX.Element;
+export default Button;

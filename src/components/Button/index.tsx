@@ -10,7 +10,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   background?: string;
 }
 
-export const Button = ({
+const Button = ({
   type,
   color,
   label,
@@ -30,3 +30,5 @@ export const Button = ({
     </S.ButtonBox>
   );
 };
+
+export default Button;
