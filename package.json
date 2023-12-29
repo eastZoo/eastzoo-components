@@ -1,6 +1,6 @@
 {
   "name": "eastzoo-components",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,14 +16,11 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.68",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.2",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.6",
-    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -31,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "tsc -p tsconfig.json"
+    "prepare": "tsc && babel src --out-dir dist --ignore test.js"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +47,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/plugin-transform-runtime": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "typescript": "^5.3.3"
   }
 }
